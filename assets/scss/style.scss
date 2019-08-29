@@ -1,0 +1,74 @@
+// Mes Extends
+
+%background{
+	background-repeat: no-repeat;
+	background-position: rigth;
+	background-size: 15px;
+}
+%background-color{
+	-webkit-linear-gradient:(90deg, rgb(35, 109, 102), rgb(100, 170, 89));
+	-moze-linear-gradient:(90deg, rgb(35, 109, 102), rgb(100,170,89));
+	-linear-gradient:(90deg, rgb(35, 109, 102), rgb(10, 170, 89));
+}
+%border{
+	
+	border-left: inset 6px;
+}	
+// Mes Fonctions
+
+$print: helvetica, sans-serif;
+
+// Mes Mixins
+%grid{
+	grid-template-colunms:(4, 1fr);
+	grid-template-row:(4, 1fr);
+}
+
+
+body{
+	display: grid;
+	@extend %background-color;
+	@extend %grid
+
+}
+
+a{
+	text-decoration:none;
+	& hover{
+		color:green;
+	}
+}
+
+.heater{
+	@extend %grid;
+	grid-colunms: 1/4;
+	grid-row:1;
+	ol{background-color:yellow;}
+	ul{float:left;}
+		.type{
+			@extend %grid;
+
+}
+blockquote{
+	width:45%;
+	margin: auto;
+	margin-top:50px;
+	padding:30px;
+	font-size:160%;
+	background-color:#D1CCC7; 
+    border-left: inset 3px;
+    border-color: Firebrick;
+}
+.m{
+	@extend %background;
+	padding-rigth: 15px;
+}
+.villageois{
+	@extend %border;
+	border-color:red;
+}
+
+.agriculteur{
+	@extend %border;
+	border-color: yellow;
+}
