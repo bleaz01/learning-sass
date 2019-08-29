@@ -1,3 +1,7 @@
+// Mes @import
+
+@import "_partial.scss";
+
 // Mes Extends
 
 %background{
@@ -11,11 +15,14 @@
 	-linear-gradient:(90deg, rgb(35, 109, 102), rgb(10, 170, 89));
 }
 %border{
-	
 	border-left: inset 6px;
-}	
-// Mes Fonctions
+}
 
+
+
+
+// Mes Fonctions
+$capi: capitalize;
 $print: helvetica, sans-serif;
 
 // Mes Mixins
@@ -26,16 +33,15 @@ $print: helvetica, sans-serif;
 
 
 body{
-	display: grid;
 	@extend %background-color;
-	@extend %grid
-
+	background-image:url("../img/b2.jpg");
+	width: 90%;
+	margin:auto;
 }
 
 a{
 	text-decoration:none;
-	& hover{
-		color:green;
+	&:hover{color:green;
 	}
 }
 
@@ -45,10 +51,13 @@ a{
 	grid-row:1;
 	ol{background-color:yellow;}
 	ul{float:left;}
-		.type{
-			@extend %grid;
-
 }
+.type{
+	display: block;
+	width:50%;
+}
+
+
 blockquote{
 	width:45%;
 	margin: auto;
@@ -58,6 +67,15 @@ blockquote{
 	background-color:#D1CCC7; 
     border-left: inset 3px;
     border-color: Firebrick;
+}
+
+// section Main
+
+p{
+	@extend %p-style;
+	color:#040
+}
+.preamble{
 }
 .m{
 	@extend %background;
@@ -70,5 +88,32 @@ blockquote{
 
 .agriculteur{
 	@extend %border;
-	border-color: yellow;
+	border-color:yellow;
+}
+.good{
+	text-transform:$capi;
+	color: green;
+}
+.bad{
+	text-transform: $capi;
+	color: red;
+}
+.table{
+	margin-top:50px;
+		table{
+			width:300px;
+		}
+}
+
+.notification{
+  background:#FFFFDD;
+  padding:.5rem 1rem;
+  width:250px;
+  font-weight:bold;
+  color: #333300;
+  position:fixed;
+  bottom:0;
+  right:0;
+  font-family: 'Livvic', sans-Serif;
+  text-align:center;
 }
