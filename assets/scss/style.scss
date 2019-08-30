@@ -67,7 +67,7 @@ li{
 		background-image: url("../img/chat.png");
 	}
 	.b{
-		@extend %bacground;
+		@extend %background;
 		background-image:url("../img/bien.png");
 	}
 
