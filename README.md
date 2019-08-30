@@ -6,4 +6,4 @@ Réaliser
   2. VARIABLE
   3. FICHIER PARTIAL.SCSS
   
- [MON PROJECT]( https://bleaz01.github.io/learning-sass/.)
+ [MON PROJECT]( https://bleaz01.github.io/learning-sass/index.html.)
