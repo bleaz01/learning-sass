@@ -3,15 +3,18 @@
 @import "_partial.scss";
 
 // Mes Extends
-
+%background-body{
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	background-size:cover;
+}
 %background{
 	background-repeat: no-repeat;
 	background-position: rigth;
 	background-size: 15px;
+	padding-right:15px;
 }
 %background-color{
-	-webkit-linear-gradient:(90deg, rgb(35, 109, 102), rgb(100, 170, 89));
-	-moze-linear-gradient:(90deg, rgb(35, 109, 102), rgb(100,170,89));
 	-linear-gradient:(90deg, rgb(35, 109, 102), rgb(10, 170, 89));
 }
 %border{
@@ -33,7 +36,7 @@ $print: helvetica, sans-serif;
 
 
 body{
-	@extend %background-color;
+	@extend %background-body;
 	background-image:url("../img/b2.jpg");
 	width: 90%;
 	margin:auto;
@@ -52,6 +55,24 @@ a{
 	ol{background-color:yellow;}
 	ul{float:left;}
 }
+
+li{
+		// icon 
+	.m{
+		@extend %background;
+		background-image:url("../img/mal.png");
+	}
+	.c{
+		@extend %background;
+		background-image: url("../img/chat.png");
+	}
+	.b{
+		@extend %bacground;
+		background-image:url("../img/bien.png");
+	}
+
+}
+
 .type{
 	display: block;
 	width:50%;
@@ -67,8 +88,8 @@ blockquote{
 	background-color:#D1CCC7; 
     border-left: inset 3px;
     border-color: Firebrick;
-}
 
+}
 // section Main
 
 p{
@@ -76,10 +97,6 @@ p{
 	color:#040
 }
 .preamble{
-}
-.m{
-	@extend %background;
-	padding-rigth: 15px;
 }
 .villageois{
 	@extend %border;
@@ -102,6 +119,8 @@ p{
 	margin-top:50px;
 		table{
 			width:300px;
+		.un{background-color:red;}
+		.deux{background-color:white;}
 		}
 }
 
@@ -110,10 +129,20 @@ p{
   padding:.5rem 1rem;
   width:250px;
   font-weight:bold;
-  color: #333300;
+  color: #333322;
   position:fixed;
   bottom:0;
   right:0;
   font-family: 'Livvic', sans-Serif;
   text-align:center;
+}
+.story{
+	margin-bottom:50px;
+	img{
+		display:block;
+		float:left;
+	}
+}
+img{
+	width:100%
 }

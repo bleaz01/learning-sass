@@ -1,92 +1,37 @@
-p {
-  font-family: serif;
-  word-spacing: 2px;
-  letter-spacing: 2px; }
+/*
+Sass::SyntaxError: "li .b" failed to @extend "%bacground".
+The selector "%bacground" was not found.
+Use "@extend %bacground !optional" if the extend should be able to fail.
 
-.m {
-  background-repeat: no-repeat;
-  background-position: rigth;
-  background-size: 15px; }
 
-body {
-  -webkit-linear-gradient: 90deg, #236d66, #64aa59;
-  -moze-linear-gradient: 90deg, #236d66, #64aa59;
-  -linear-gradient: 90deg, #236d66, #0aaa59; }
-
-.villageois, .agriculteur {
-  border-left: inset 6px; }
-
-.heater {
-  grid-template-colunms: 4, 1fr;
-  grid-template-row: 4, 1fr; }
-
-body {
-  background-image: url("../img/b2.jpg");
-  width: 90%;
-  margin: auto; }
-
-a {
-  text-decoration: none; }
-  a:hover {
-    color: green; }
-
-.heater {
-  grid-colunms: 1/4;
-  grid-row: 1; }
-  .heater ol {
-    background-color: yellow; }
-  .heater ul {
-    float: left; }
-
-.type {
-  display: block;
-  width: 50%; }
-
-blockquote {
-  width: 45%;
-  margin: auto;
-  margin-top: 50px;
-  padding: 30px;
-  font-size: 160%;
-  background-color: #D1CCC7;
-  border-left: inset 3px;
-  border-color: Firebrick; }
-
-p {
-  color: #040; }
-
-.m {
-  padding-rigth: 15px; }
-
-.villageois {
-  border-color: red; }
-
-.agriculteur {
-  border-color: yellow; }
-
-.good {
-  text-transform: capitalize;
-  color: green; }
-
-.bad {
-  text-transform: capitalize;
-  color: red; }
-
-.table {
-  margin-top: 50px; }
-  .table table {
-    width: 300px; }
-
-.notification {
-  background: #FFFFDD;
-  padding: .5rem 1rem;
-  width: 250px;
-  font-weight: bold;
-  color: #333300;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  font-family: 'Livvic', sans-Serif;
-  text-align: center; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+scss/style.scss:70
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/extend.rb:62:in `block in check_extends_fired!'
+/usr/lib/ruby/vendor_ruby/sass/util/subset_map.rb:105:in `block in each_value'
+/usr/lib/ruby/vendor_ruby/sass/util/subset_map.rb:105:in `each'
+/usr/lib/ruby/vendor_ruby/sass/util/subset_map.rb:105:in `each_value'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/extend.rb:51:in `check_extends_fired!'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/extend.rb:16:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:39:in `css_tree'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
+/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: \"li .b\" failed to @extend \"%bacground\".\A The selector \"%bacground\" was not found.\A Use \"@extend %bacground !optional\" if the extend should be able to fail.\A "; }
